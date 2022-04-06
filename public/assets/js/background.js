@@ -20,7 +20,7 @@ function getWord({ selectionText, pageUrl }) {
               word: selectionText.trim(),
               translation: data,
               pageUrl,
-              createdAt: new Date(),
+              createdAt: new Date().toString(),
             },
           ];
           store(wordsKey, item);
