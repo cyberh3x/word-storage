@@ -1,3 +1,4 @@
+/*global chrome*/
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/system";
 import { createTheme } from "@mui/material/styles";
@@ -7,6 +8,7 @@ import Home from "./Home/Index";
 const PageRoot = () => {
   const [{ theme }] = useApp(),
     muiTheme = createTheme(theme);
+
   return (
     <main>
       <ThemeProvider theme={muiTheme}>
