@@ -1,4 +1,5 @@
 import useWords from "Hooks/UseWords";
+import useSpeech from "Hooks/UseSpeech";
 import styled from "@mui/system/styled";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -31,12 +32,7 @@ const StyledNotFoundGrid = styled("div")(() => ({
 
 const Content = () => {
   const { word, words, edit, remove } = useWords(),
-    handleSpeech = () => {
-      let speech = new SpeechSynthesisUtterance();
-      speech.lang = "en-US";
-      speech.text = word.word;
-      window.speechSynthesis.speak(speech);
-    };
+    { speak } = useSpeech();
 
   return (
     <>
@@ -74,7 +70,7 @@ const Content = () => {
                   color="primary"
                   aria-label="add"
                   size="small"
-                  onClick={handleSpeech}
+                  onClick={() => speak(word.word)}
                   title="Listen"
                 >
                   <VolumeUpIcon color="action" />
@@ -95,7 +91,9 @@ const Content = () => {
             </Grid>
           </Grid>
           <hr />
-          <Typography variant="h5">{word.translation}</Typography>
+          <Typography variant="subtitle1" className="rtl-font">
+            {word.translation}
+          </Typography>
         </StyledContainer>
       ) : (
         <Grid item xs={12} textAlign="center">

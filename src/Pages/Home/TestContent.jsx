@@ -9,7 +9,7 @@ import LinkIcon from "@mui/icons-material/Link";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const StyledContainer = styled("div")(({ theme }) => ({
+const StyledContainer = styled("div")(() => ({
   position: "absolute",
   left: 0,
   right: 0,
@@ -55,7 +55,9 @@ const TestContent = () => {
         </Grid>
       </Grid>
       <hr />
-      <Typography variant="h5">Translation</Typography>
+      <Typography variant="subtitle1" className="rtl-font">
+        ترجمه
+      </Typography>
     </StyledContainer>
   );
 };

@@ -1,4 +1,6 @@
-import { Grid, Link, Typography } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
@@ -7,7 +9,7 @@ const StyledGrid = styled(Grid)(({ theme }) => ({
   left: 0,
   right: 0,
   textAlign: "center",
-  marginBottom: theme.spacing(3)
+  marginBottom: theme.spacing(3),
 }));
 
 const Footer = () => {

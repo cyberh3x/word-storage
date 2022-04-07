@@ -9,7 +9,9 @@ const AppState = {
         main: "#09061e",
       },
     },
-    direction: "rtl",
+    typography: {
+      fontFamily: ["Ubuntu", "sans-serif"].join(", "),
+    },
   },
 };
 
