@@ -36,15 +36,17 @@ function getWord({ selectionText, pageUrl }) {
   });
 }
 
+// Create context menu
+contextMenus.removeAll(() => {
+  contextMenus.create({
+    title: "Store Word",
+    contexts: ["selection"],
+    id: "root",
+  });
+});
+
 // On context menu clicked listener
 contextMenus.onClicked.addListener(getWord);
-
-// Create context menu
-contextMenus.create({
-  title: 'Store "%s"',
-  contexts: ["selection"],
-  id: Math.random().toString(),
-});
 
 /**
  * Get current tab DOM
