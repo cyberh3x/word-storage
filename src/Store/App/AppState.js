@@ -3,13 +3,15 @@ const AppState = {
     palette: {
       mode: "dark",
       primary: {
-        main: "#00efe6",
+        main: "#6f50cd",
       },
       secondary: {
-        main: "#01cf05",
+        main: "#09061e",
       },
     },
-    direction: "rtl",
+    typography: {
+      fontFamily: ["Ubuntu", "sans-serif"].join(", "),
+    },
   },
 };
 

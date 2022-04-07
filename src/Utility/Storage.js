@@ -1,3 +1,5 @@
+/*global chrome*/
+const { storage } = chrome;
 /**
  * Store item to chrome storage
  * @param {String} key
