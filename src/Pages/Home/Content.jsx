@@ -39,7 +39,7 @@ const Content = () => {
       {words.length ? (
         <StyledContainer>
           <Grid container alignItems={"center"} justifyContent="center">
-            <Grid item xs={4}>
+            <Grid item xs={2}>
               <Grid container justifyContent="start">
                 <Fab
                   color="warning"
@@ -61,10 +61,10 @@ const Content = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8}>
               <Typography variant="h2">{word.word}</Typography>
             </Grid>
-            <Grid item xs={4} textAlign="right">
+            <Grid item xs={2} textAlign="right">
               <Grid container justifyContent="end">
                 <Fab
                   color="primary"
