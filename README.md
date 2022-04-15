@@ -16,7 +16,7 @@ With features like:
 # Installation
 1. `npm install`
 2. `npm run build`
-3. Load `build` folder in your browser
+3. Load `build` folder in your browser extensions
 
 And select a word and right click on it then click `Store word` and fill translation input
 
